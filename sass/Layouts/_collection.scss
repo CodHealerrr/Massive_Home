@@ -1,0 +1,65 @@
+.collection {
+    background-image: url(../img/pattern-2.png);
+    .collection__content {
+        padding-top: $pd-4;
+        width: 80%;
+        margin: 0 auto;
+        ul {
+            li {
+                margin-bottom: $mg-1;
+                .nav-link {
+                    &.active {
+                        background-color: $color-white;
+                        color: $color-black-2;
+                        font-weight: $fw-0;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            width: 15px;
+                            height: 15px;
+                            background-color: $color-white;
+                            display: inline-block;
+                            position: absolute;
+                            bottom: -8px;
+                            left: 45%;
+                            transform: translate(-50%);
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+                a {
+                    background-color: $color-rgba-4;
+                    font-size: $fs-5;
+                    padding: $pd-9 $pd-10;
+                    color: $color-black-2;
+                }
+            }
+        }
+        .tab-content {
+            h3 {
+                padding-top: $pd-1;
+                @include styleText($fs-0 - 1, $color-gray, $fw-1);
+                letter-spacing: 2px;
+            }
+            h2 {
+                @include styleText($fs-6, $color-black-1, $fw-1);
+                letter-spacing: 2px;
+                margin-bottom: $mg-2;
+            }
+            p {
+                @include styleText($fs-0, $color-gray, $fw-1);
+                line-height: 25px;
+            }
+            padding-bottom: $pd-4;
+        }
+    }
+    @include responsive("Large") {
+        .collection__content {
+            ul {
+                li {
+                    padding: $pd-0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.buttonBlack {
+    background-color: $color-black-2;
+    color: $color-white;
+    padding: $pd-0 + 3 $pd-1;
+    transition: all 0.5s;
+    border-radius: 0;
+    &:hover {
+        background-color: $color-hover;
+    }
+}
+
+.buttonYellow {
+    background-color: $color-hover;
+    color: $color-white;
+    padding: $pd-0 + 3 $pd-1;
+    transition: all 0.5s;
+    border-radius: 0;
+    &:hover {
+        background-color: $color-white;
+        color: $color-black-1;
+    }
+}

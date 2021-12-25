@@ -1,0 +1,102 @@
+header {
+    &.navbar {
+        z-index: 500;
+        width: 100%;
+        padding: 0;
+        .header__content {
+            width: 100%;
+            padding: 0 $pd-2;
+            position: absolute;
+            top: 0;
+            background-color: none;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.5s;
+            .header__img {
+                img {
+                    height: $fs-1;
+                }
+            }
+            .collapse {
+                justify-content: flex-end;
+                .navbar-nav {
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.5s;
+
+                    .nav-link {
+                        padding: 0 $pd-0;
+
+                        font-size: $fs-2;
+                        height: 100%;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: $color-white;
+                        &:hover {
+                            color: $color-hover;
+                        }
+
+                        .active {
+                            color: $color-hover;
+                        }
+                        i {
+                            color: $color-white;
+                            transition: all 0.5s;
+                            &:hover {
+                                color: $color-hover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .navbar-toggler {
+                color: white;
+            }
+        }
+
+        &.sticky {
+            position: fixed;
+            background-color: $color-black-4;
+            height: 60px;
+            .header__content {
+                padding-bottom: $pd-0;
+                .header__img {
+                    img {
+                        height: 60px;
+                    }
+                }
+            }
+        }
+
+        @include responsive("Medium") {
+            .header__content {
+                .collapse {
+                    .navbar-nav {
+                        position: absolute;
+                        top: 60px;
+                        width: 100%;
+                        right: 0;
+                        background-color: $color-white;
+                        .nav-link {
+                            width: 100%;
+                            color: $color-black-4;
+                            padding: $pd-2 0;
+                            border: 1px solid $color-rgba-4;
+                            i {
+                                color: $color-black-4;
+                            }
+                            &:hover {
+                                color: $color-hover;
+                            }
+                        }
+
+                        .hidden {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.backToTop {
+    background-color: $color-black-2;
+    color: $color-white;
+    height: 40px;
+    width: 40px;
+    transition: all 0.5s;
+    border-radius: 0;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    visibility: hidden;
+    opacity: 0;
+    &.cd-top--is-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    i {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        line-height: 40px;
+        text-align: center;
+    }
+    &:hover {
+        background-color: $color-hover;
+    }
+}

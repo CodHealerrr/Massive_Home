@@ -1,0 +1,26 @@
+.modal {
+    max-height: 735px;
+    .modal-dialog {
+        max-width: 110vh;
+    }
+    .close {
+        span {
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+    .modal-body {
+        padding: 0;
+        img {
+            width: 100%;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    p {
+        @include styleText($fs-2, $color-white, $fw-1);
+    }
+}

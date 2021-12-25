@@ -1,0 +1,123 @@
+.team {
+    .team__top {
+        padding: $pd-4 0;
+
+        h3 {
+            @extend %h3;
+        }
+        p {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            color: $color-gray-1;
+        }
+    }
+    .team__bottom {
+        .teamMember {
+            width: 80%;
+            margin: 0 auto;
+            .team__member {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .team__title {
+                    position: absolute;
+                    background-color: $color-rgba-3;
+                    width: 60%;
+                    bottom: 10%;
+                    right: 0;
+                    text-align: right;
+                    padding: $pd-2 $pd-0;
+                    h2 {
+                        @include styleText($fs-0 - 1, $color-white, $fw-1);
+                        letter-spacing: 2px;
+                        margin: 0;
+                    }
+                    p {
+                        @include styleText($fs-0 - 3, $color-white-1, $fw-1);
+                        letter-spacing: 2px;
+                        margin: 0;
+                    }
+                }
+                .team__tail {
+                    background-color: $color-rgba-1;
+                    color: $color-black-2;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    border: $fs-4 solid $color-rgba-2;
+                    opacity: 0;
+                    transition: all 0.5s;
+                    &:hover {
+                        opacity: 1;
+                        .detailTeam__content {
+                            h4,
+                            p,
+                            .team__social {
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                    .detailTeam__content {
+                        text-align: center;
+
+                        h4 {
+                            @include styleText($fs-0 - 1, $color-black-2, $fw-1);
+                            letter-spacing: 4px;
+                            transform: translateY(-10vh);
+                            transition: all 0.8s;
+                        }
+                        p {
+                            @include styleText($fs-0 - 1, $color-gray, $fw-1);
+                            line-height: 30px;
+                            transform: translateY(-10vh);
+                            transition: all 0.8s;
+                        }
+
+                        .team__social {
+                            position: absolute;
+                            display: flex;
+                            bottom: 8%;
+                            left: 30%;
+                            transform: translateY(5vh);
+
+                            justify-content: space-between;
+                            transition: all 0.8s;
+                            i {
+                                padding: 0 $pd-6 - 2;
+                                cursor: pointer;
+                                &:hover {
+                                    color: $color-hover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .team__hiring {
+            width: 80%;
+            padding: 0;
+            margin: $mg-4 auto $mg-4 auto;
+
+            background-color: $color-white-2;
+            padding: $pd-7;
+
+            h3 {
+                @include styleText($fs-4 - 2, $color-black-1, $fw-1);
+                letter-spacing: 2px;
+                span {
+                    color: $color-hover;
+                }
+            }
+            p {
+                @include styleText($fs-0, $color-gray-1, $fw-1);
+            }
+        }
+    }
+}

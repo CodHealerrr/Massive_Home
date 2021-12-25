@@ -1,0 +1,90 @@
+.intro {
+    .intro__content {
+        padding: $pd-4 0;
+        .intro__itemTop {
+            margin-bottom: $pd-3;
+            h3 {
+                @extend %h3;
+            }
+            p {
+                line-height: 25px;
+                text-align: center;
+                width: 60%;
+                margin: 0 auto;
+                color: $color-gray;
+            }
+        }
+        .intro__itemBottom {
+            position: relative;
+            .intro__icon {
+                width: 60px;
+                height: 60px;
+                border-radius: $bRadius;
+                padding-bottom: $pd-1;
+                line-height: 63px;
+                text-align: center;
+                color: $color-white;
+                background-color: $color-black;
+                position: absolute;
+                top: -15%;
+                left: 12%;
+                transition: all 0.5s;
+                i {
+                    font-size: 25px;
+                }
+                &:hover {
+                    background-color: $color-hover;
+                }
+            }
+
+            .intro__detail {
+                border: 1px solid $color-white-1;
+                padding: $pd-1;
+                h3 {
+                    padding-top: $pd-1 - 5;
+                    @include styleText($fs-0 + 3, $color-black-1, $fw-1);
+                    margin-bottom: $mg-1;
+                    letter-spacing: 1px;
+                }
+                p {
+                    color: $color-gray;
+                }
+            }
+        }
+    }
+    @include responsive("Large") {
+        .intro__content {
+            .intro__itemBottom {
+                .row {
+                    width: 70%;
+                    margin: 0 auto;
+                    .intro__decoration {
+                        padding: 0;
+                        width: 70%;
+                        margin: 0 auto;
+                        padding-left: 0;
+                        .intro__detail {
+                            margin-bottom: $mg-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("Small") {
+        .intro__content {
+            .intro__itemBottom {
+                .row {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+                .intro__decoration {
+                    padding: 0;
+                    width: 70%;
+                    margin: 0 auto;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.blog {
+    padding: $pd-4 0;
+    .blog__top {
+        margin-bottom: $mg-2;
+        h3 {
+            @extend %h3;
+        }
+        p {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            @include styleText($fs-0, $color-gray, $fw-1);
+            line-height: $fs-4 + 5;
+        }
+    }
+    .blog__bottom {
+        width: 75%;
+        margin: 0 auto;
+        .blog__left {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            p {
+                position: absolute;
+                bottom: 0;
+                background-color: $color-rgba;
+                width: 100%;
+                padding: $pd-2;
+                margin: 0;
+                color: $color-white;
+            }
+        }
+        .blog__right {
+            padding: $pd-1 0;
+            span {
+                margin-bottom: $mg-0;
+                display: inline-block;
+                a {
+                    text-decoration: none;
+                    margin-right: $mg-0;
+                    @include styleText($fs-0, $color-gray, $fw-1);
+                    &:hover {
+                        color: $color-hover;
+                    }
+                }
+                .blog__rightTitle {
+                    @include styleText($fs-0 + 3, $color-black-2, $fw-1);
+                }
+            }
+            p {
+                margin-top: $mg-0 - 5;
+                @include styleText($fs-0, $color-gray, $fw-1);
+                line-height: 30px;
+            }
+            h2 {
+                @include styleText($fs-0, $color-gray-2, $fw-1);
+                &:hover {
+                    color: $color-black-2;
+                }
+            }
+        }
+    }
+}

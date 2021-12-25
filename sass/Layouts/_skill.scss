@@ -1,0 +1,111 @@
+.skill__description {
+    background-image: url(../img/parallax-1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    background-color: $color-rgba;
+    position: relative;
+
+    .skill__content {
+        padding: $pd-4 0;
+        .skill__right {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            p {
+                @include styleText($fs-4 + 4, $color-white, $fw-1);
+                letter-spacing: 2px;
+            }
+        }
+        .skill__left {
+            height: 100%;
+            padding: 0 $pd-1;
+            h3 {
+                @include styleText($fs-0 + 3, $color-white, $fw-1);
+                padding-bottom: $pd-1;
+                letter-spacing: 1px;
+            }
+            p {
+                @include styleText($fs-0, $color-white, $fw-1);
+                line-height: 1.5rem;
+                margin-bottom: $mg-3;
+            }
+            .skill_progress {
+                position: relative;
+                .percent {
+                    width: 100vw;
+                    .percent-80 {
+                        @include stylePercent(-15%, 76%);
+                    }
+                    .percent-90 {
+                        @include stylePercent(29%, 86%);
+                    }
+                    .percent-75 {
+                        @include stylePercent(73%, 71%);
+                    }
+                }
+            }
+
+            .progress {
+                margin: $mg-0 0 $mg-2 0;
+                width: 100%;
+                background-color: $color-gray;
+                height: 20px;
+                border-radius: 0;
+
+                .progress-bar {
+                    color: $color-black;
+                    background-color: $color-white;
+                    text-align: left;
+                    padding-left: $pd-5;
+                }
+            }
+        }
+    }
+
+    .dark__theme {
+        position: absolute;
+        background-color: $color-rgba;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+    }
+
+    @include responsive("Large") {
+        .skill__content {
+            position: relative;
+            .skill__right {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .skill__left {
+                padding: 0;
+                padding-top: $pd-1;
+            }
+        }
+        .dark__theme {
+            background-color: transparent;
+        }
+    }
+    @include responsive("Medium") {
+        .skill__content {
+            .row {
+                width: 100%;
+                .skill__leftContain {
+                    padding: 0;
+                }
+                .skill__leftContain {
+                    width: 100%;
+                    .skill__left {
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

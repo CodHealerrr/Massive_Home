@@ -1,0 +1,90 @@
+footer {
+    background-color: $color-black-2;
+    .footer__content {
+        padding: $pd-4 0;
+        position: relative;
+        .footer__top {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: $pd-4;
+            .footer__item {
+                padding: 0 $pd-1;
+                img {
+                    height: 100px;
+                    margin-bottom: $mg-1;
+                }
+                p {
+                    color: $color-gray;
+                    line-height: 30px;
+                }
+            }
+            h4 {
+                @include styleText($fs-0 - 1, $color-white, $fw-1);
+                margin: $mg-3 0;
+            }
+            .footer__detail {
+                a {
+                    display: block;
+                    line-height: 45px;
+                    color: $color-gray;
+                    text-decoration: none;
+                    border-bottom: 1px solid $color-gray;
+                    &:hover {
+                        color: $color-hover;
+                    }
+                }
+            }
+            .footer__img {
+                padding: 0 $pd-1;
+                a {
+                    img {
+                        width: 55px;
+                        height: 55px;
+                        margin: $mg-5;
+                    }
+                }
+            }
+        }
+        .footer__bottom {
+            background-color: $color-black-3;
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            .footer__bottomContent {
+                padding: $pd-1 0;
+                color: $color-gray;
+                width: 80%;
+                margin: 0 auto;
+                .footer__bottomLeft {
+                    a {
+                        color: $color-white;
+                        text-decoration: none;
+                        transition: all 0.5s;
+                        &:hover {
+                            color: $color-hover;
+                        }
+                    }
+                }
+                .footer__bottomRight {
+                    a {
+                        width: 35px;
+                        height: 35px;
+                        border: 1px solid $color-gray;
+                        line-height: 35px;
+                        border-radius: 50%;
+                        color: $color-gray;
+                        padding: $pd-0;
+                        text-decoration: none;
+                        margin-left: $mg-0 + 5;
+                        transition: all 0.5s;
+                        &:hover {
+                            color: $color-white;
+                            background-color: $color-gray-3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

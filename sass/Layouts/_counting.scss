@@ -1,0 +1,25 @@
+.counting {
+    background-color: $color-black-2;
+    color: $color-white;
+    .counting__detail {
+        width: 80%;
+        margin: 0 auto;
+        padding: $pd-4 0;
+        .counting__item {
+            .counting__number {
+                width: 35%;
+                margin: 0 auto;
+                font-size: $fs-5;
+                i {
+                    padding-right: $pd-0 - 2;
+                }
+                .counter {
+                    margin-bottom: $mg-0;
+                }
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@mixin styleText($font-size, $color, $font-weight) {
+    font-size: $font-size;
+    color: $color;
+    font-weight: $font-weight;
+}
+
+@mixin stylePercent($top, $left) {
+    font-size: $fs-2 - 2;
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    border-radius: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: $color-gray-1;
+    color: $color-white;
+    top: $top;
+    left: $left;
+    &::after {
+        content: "";
+        height: 5px;
+        width: 5px;
+        display: block;
+        background-color: $color-gray-1;
+        position: absolute;
+        top: 90%;
+        left: 56%;
+        transform: rotate(45deg);
+    }
+}
+
+@mixin responsive($screen) {
+    @if map-has-key($map: $breakpoints, $key: $screen) {
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $screen,
+        );
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "`{$screen}` isn't existed in breakpoints";
+    }
+}
